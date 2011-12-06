@@ -1,8 +1,8 @@
 <?
 	/*
-		Realizada por: Henoc Díaz (@roofdier)
-		Última modificación: Diciembre'06 2011
-		México, DF.
+		Realizada por: Henoc Dï¿½az (@roofdier)
+		ï¿½ltima modificaciï¿½n: Diciembre'06 2011
+		Mï¿½xico, DF.
 	*/
 	
 	class bd
@@ -17,11 +17,11 @@
 					
 		function bd()
 		{				
-			$this->user  = "randz";
-			$this->password = "contrasenna";
-			$this->host = "localhost";
-			$this->status = "Correct";
-			$this->db = "Newsletter";
+			$this->user  = "" // Usuario de la base de datos;
+			$this->password = "" // ConstraseÃ±a para acceder a la base de datos;
+			$this->host = "" // Servidor donde estÃ¡ alojada la base de datos;
+			$this->status = "" // Vacio;
+			$this->db = "" // Base de datos que se va a utilizar;
 			$this->cxn = mysql_connect($this->host,$this->user,$this->password);
 			mysql_select_db($this->db,$this->cxn);
 		}
@@ -86,7 +86,7 @@
 			}
 		}
 		
-		// Verificar si existe un registro según parámetros
+		// Verificar si existe un registro segï¿½n parï¿½metros
 		function verify1($table,$fill,$keyword,$type)
 		{
 				$ex = false;			
@@ -223,7 +223,7 @@
 		function isold($ddb)
 		{
 			$tor = false;
-			list($d1,$m1,$y1) = explode("-",$ddb); // Fecha de la máquina
+			list($d1,$m1,$y1) = explode("-",$ddb); // Fecha de la mï¿½quina
 
 			if(mktime(0,0,0,date("n"),date("j"),date("Y"))>mktime(0,0,0,$m1,$d1,$y1))
 				$tor = true;
